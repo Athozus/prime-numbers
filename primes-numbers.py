@@ -1,4 +1,4 @@
-from math import ceil, sqrt
+from math import ceil
 from time import time
 
 def primesNb(max, show=True):
@@ -23,14 +23,14 @@ def primesNb(max, show=True):
                         nbs[j] = False
     except:
         if show:
-            for i in range(1, max):
+            for i in range(2, max):
                 prime = True
                 if i == 2:
                     pass
                 elif i%2 == 0:
                     prime = False
                 else:
-                    for j in range(1, ceil(sqrt(max)), 2):
+                    for j in range(3, ceil(i**0.5), 2):
                         if i%j == 0:
                             prime = False
                             break
@@ -41,11 +41,11 @@ def primesNb(max, show=True):
             for i in range(1, max):
                 prime = True
                 if i == 2:
-                    pas
+                    pass
                 elif i%2 == 0:
                     prime = False
                 else:
-                    for j in range(1, ceil(sqrt(max)), 2):
+                    for j in range(3, ceil(i**0.5), 2):
                         if i%j == 0:
                             prime = False
                             break
